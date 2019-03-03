@@ -1,0 +1,11 @@
+from Trump_pro import Trump_pro
+import random
+
+def pull_card(num_o_card, Trump_pro):
+    for i in range(num_o_card):
+        Trump_pro.deck[i].print_property()
+deck_1 = Trump_pro()    
+random.shuffle(deck_1.deck)
+#for i in range(len(deck_1.deck)):
+    #deck_1.deck[i].print_property()
+pull_card(5, deck_1)

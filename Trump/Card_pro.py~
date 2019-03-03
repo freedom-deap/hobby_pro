@@ -1,0 +1,31 @@
+'''
+カード1枚1枚を表すクラス
+・suit:スペード、ハート、クラブ、ダイヤの4種類を0～3の4つの数で表す
+・number:A～Kの数（文字)を表す
+・例外としてジョーカーはsuit無し、数をJokerとして扱う
+'''
+
+class Card_pro:
+    def __init__(self, suit, number):
+        self.suit = suit
+        self.number = number
+
+    def print_property(self):
+        if self.suit in [0, 1, 2, 3]:
+            print('このカードは'+ self.suit_to_mark()+'の'+str(self.number)+'です')
+        else:
+            print('このカードは'+str(self.number)+'です')
+            
+    def suit_to_mark(self):
+        if self.suit ==  0:
+            return 'スペード'
+        elif self.suit == 1:
+            return 'ハート'
+        elif self.suit == 2:
+            return 'クラブ'
+        elif self.suit == 3:
+            return 'ダイヤ'
+        
+if __name__ == '__main__':
+    h_k = Card_pro(1,'K')
+    h_k.print_property()
