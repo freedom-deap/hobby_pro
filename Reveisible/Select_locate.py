@@ -8,7 +8,7 @@ class Select_locate:
         input_num = input("行番号と列番号を入力してください（例　1,1）:").split(',')
         if(len(input_num) != 2):
             print("入力の数が間違っています")
-            self.select_locate()
+            self.select_locate(field)
         self.input_num[0] = int(input_num[0])-1
         self.input_num[1] = int(input_num[1])-1
         if field[self.input_num[0]][self.input_num[1]] != 0:
